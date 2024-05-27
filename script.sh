@@ -4,6 +4,10 @@
 #SBATCH --error=log/%j/errors.err # fichier d’erreur (%j = job ID)
 #SBATCH --partition=prepost
 #SBATCH --nodes=1 # reserver 1 nœud
+#SBATCH --cpus-per-task=20 # reserver 10 CPU par tache (et memoire associee)
+#SBATCH --time=10:00:00 # temps maximal d’allocation "(HH:MM:SS)"
+#SBATCH --hint=nomultithread # desactiver l’hyperthreading
+#SBATCH --account=sxq@v100 # comptabilite V100
 
 module purge # nettoyer les modules herites par defaut
 conda deactivate # desactiver les environnements herites par defaut
