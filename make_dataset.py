@@ -44,7 +44,7 @@ if __name__ == "__main__":
     print('=> collecting and cleaning subset captions')
     captioned = []
     uncaptioned = []
-    with open('yfcc100m_dataset.txt') as f:
+    with open(args.metadata) as f:
         for l in tqdm(f.readlines()):
             row = l.strip().split('\t')
             if int(row[0]) in image_ids:
