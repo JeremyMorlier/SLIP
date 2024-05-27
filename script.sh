@@ -2,7 +2,7 @@
 #SBATCH --job-name=TravailGPU # nom du job
 #SBATCH --output=log/%j/logs.out # fichier de sortie (%j = job ID)
 #SBATCH --error=log/%j/errors.err # fichier d’erreur (%j = job ID)
-#SBATCH --constraint=v100-16g # demander des GPU a 16 Go de RAM
+#SBATCH --partition=prepost
 #SBATCH --nodes=1 # reserver 1 nœud
 #SBATCH --ntasks=1 # reserver 4 taches (ou processus)
 #SBATCH --gres=gpu:4 # reserver 4 GPU
